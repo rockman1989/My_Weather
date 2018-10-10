@@ -1,6 +1,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.wangyi.my_weather">
-
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
     <application android:allowBackup="true" android:label="My_Weather"
         android:icon="@drawable/ic_launcher" android:theme="@style/AppTheme">
         <activity android:name="MainActivity">
