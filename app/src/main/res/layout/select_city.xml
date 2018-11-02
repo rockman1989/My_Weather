@@ -14,6 +14,8 @@
             android:text="当前城市：北京"
             android:textColor="#ffffffff"
             android:textSize="20.0dip" />
+
+
         <ImageView
             android:id="@+id/title_back"
             android:layout_width="45.0dip"
@@ -29,13 +31,32 @@
             android:layout_gravity="center"
             android:layout_toRightOf="@id/title_back"
             android:background="#A71717"
-            android:gravity="center" />
+            android:gravity="center"
+            android:id="@+id/imageView" />
 
     </RelativeLayout>
+    <EditText
+        android:id="@+id/search_edit"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/city_title"
+        android:hint="搜索全国城市（中文）"
+        android:layout_margin="10dip"
+        android:drawableLeft="@drawable/magnifying_glass"
+        android:drawablePadding="8dip"
+        android:paddingBottom="8.0dip"
+        android:paddingLeft="10.0dip"
+        android:paddingRight="30.0dip"
+        android:paddingTop="8.0dip"
+        android:singleLine="true"
+        android:background="@drawable/contact_search_box_edittext_keyword_background"
+        android:textColor="#ff000000"
+        android:textColorHint="#ffcccccc"
+        android:textSize="15.0sp"/>
     <ListView
         android:id="@+id/list_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/city_title">
+        android:layout_below="@id/search_edit">
     </ListView>
 </RelativeLayout>

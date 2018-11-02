@@ -106,6 +106,8 @@ public class MainActivity extends Activity implements View.OnClickListener {
     @Override
     public void onClick(View view) {
 
+        Log.d("view.id",view.getId()+"");
+
         if (view.getId() == R.id.title_city_manager){
             Intent i = new Intent(this, SelectCity.class);
             startActivityForResult(i,1);
@@ -117,6 +119,10 @@ public class MainActivity extends Activity implements View.OnClickListener {
             Log.d("myWeather",cityCode);
             if (NetUtil.getNetworkState(this) != NetUtil.NETWORN_NONE) {
                 Log.d("myWeather", "网络OK");
+
+                findViewById(R.id.updat_rel).setVisibility(View.INVISIBLE);
+                findViewById(R.id.title_update_progress).setVisibility(View.VISIBLE);
+
                 queryWeatherCode(cityCode);
             }else
             {
@@ -153,8 +159,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
                 TodayWeather todayWeather = null;
                 try{
                     URL url = new URL(address);
-                    con = (HttpURLConnection)url.openConnection(
-                    );
+                    con = (HttpURLConnection)url.openConnection();
                     con.setRequestMethod("GET");
                     con.setConnectTimeout(8000);
                     con.setReadTimeout(8000);
@@ -185,6 +190,11 @@ public class MainActivity extends Activity implements View.OnClickListener {
                 }finally {
                     if(con != null){
                         con.disconnect();
+                        try {
+                                Thread.currentThread().sleep(2000);
+                                findViewById(R.id.title_update_progress).setVisibility(View.INVISIBLE);
+                                findViewById(R.id.updat_rel).setVisibility(View.VISIBLE);
+                            }catch (Exception e){}
                     }
                 }
             }
