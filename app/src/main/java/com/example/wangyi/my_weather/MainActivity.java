@@ -133,6 +133,8 @@ public class MainActivity extends Activity implements View.OnClickListener {
     }
 
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        findViewById(R.id.updat_rel).setVisibility(View.VISIBLE);
+        findViewById(R.id.title_update_progress).setVisibility(View.INVISIBLE);
         if (requestCode == 1 && resultCode == RESULT_OK) {
             String newCityCode= data.getStringExtra("cityCode");
             Log.d("myWeather", "选择的城市代码为"+newCityCode);
