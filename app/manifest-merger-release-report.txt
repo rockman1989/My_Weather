@@ -43,7 +43,7 @@ category#android.intent.category.LAUNCHER
 ADDED from AndroidManifest.xml:13:17
 	android:name
 		ADDED from AndroidManifest.xml:13:27
-activity#com.example.wangyi.SelectCity
+activity#com.example.wangyi.my_weather.SelectCity
 ADDED from AndroidManifest.xml:17:9
 	android:name
 		ADDED from AndroidManifest.xml:17:19

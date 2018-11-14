@@ -14,7 +14,7 @@
             </intent-filter>
         </activity>
         
-        <activity android:name="com.example.wangyi.SelectCity">
+        <activity android:name=".SelectCity">
 
 
         </activity>

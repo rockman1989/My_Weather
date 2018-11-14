@@ -1,4 +1,4 @@
-package com.example.wangyi;
+package com.example.wangyi.my_weather;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -16,7 +16,6 @@ import android.widget.Toast;
 
 import com.example.wangyi.app.MyApplication;
 import com.example.wangyi.bean.City;
-import com.example.wangyi.my_weather.R;
 
 import java.util.ArrayList;
 import java.util.List;

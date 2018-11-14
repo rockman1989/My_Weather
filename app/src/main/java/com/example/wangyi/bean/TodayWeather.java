@@ -12,6 +12,9 @@ public class TodayWeather {
     private String quality;
     private String fengxiang;
     private String fengli;
+    private String high;
+    private String low;
+    private String type;
 
     public void setCity(String city) {
         this.city = city;
@@ -129,7 +132,5 @@ public class TodayWeather {
         return type;
     }
 
-    private String high;
-    private String low;
-    private String type;
+
 }
